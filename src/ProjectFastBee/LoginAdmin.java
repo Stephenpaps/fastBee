@@ -2,9 +2,11 @@ package ProjectFastBee;
 
 import java.io.File;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -30,7 +32,7 @@ public class LoginAdmin {
 		submit.click();
 		
 		//Today dashboard graph
-		WebElement GCWgraphtoday = driver.findElement(By.xpath("//*[@id=\'growthcanvas\']/select[1]"));
+		/*WebElement GCWgraphtoday = driver.findElement(By.xpath("//*[@id=\'growthcanvas\']/select[1]"));
 		GCWgraphtoday.click();
 		Select select3=new Select(GCWgraphtoday);
 		select3.selectByValue("monthly");
@@ -105,7 +107,7 @@ public class LoginAdmin {
 		search1.sendKeys("Goindha");
 		
 		//WebElement downloadInvoice= driver.findElement(By.xpath("/html/body/section/div/section/div/div[1]/div/div/div/div/div[2]/button"));
-		//downloadInvoice.click();
+		//downloadInvoice.click();*/
 			
 	   
 	    
@@ -129,22 +131,44 @@ public class LoginAdmin {
 		Enddate1.clear();
 		Enddate1.sendKeys("18th Nov 2021");
 		
-		WebElement Restaurantselection= driver.findElement(By.xpath("//*[@id=\'restaurant_id\']"));
+		/*WebElement Restaurantselection= driver.findElement(By.xpath("//*[@id=\'restaurant_id\']"));
 		Restaurantselection.click();
 		Select select8=new Select(Restaurantselection);
-		select8.selectByVisibleText("Juicy");
+		select8.selectByVisibleText("Juicy");*/
 		
 		WebElement SalesReport= driver.findElement(By.xpath("//*[@id=\'form_validation\']/div/div[4]/button"));
 		SalesReport.click();
 		
 		
+		WebElement pagination = driver.findElement(By.xpath("//*[@id=\'nosortingtables_paginate\']/ul/li[4]/a"));
+		pagination.click();
+
+		Thread.sleep(3000);
+		WebElement Searchsales=driver.findElement(By.xpath("//*[@id=\'nosortingtables_filter\']/label/input"));
+		Searchsales.sendKeys("FASTBEE060");
 		
+		Thread.sleep(3000);
 		
 		//Order Management Module
 		WebElement Ordermanagement=driver.findElement(By.xpath("//a[normalize-space()='Order Management']"));
 		Ordermanagement.click();
 		
+		WebElement Actionstoassign=driver.findElement(By.xpath("//*[@id=\'dropdownMenuButton\']"));
+		Actionstoassign.click();
 		
+		WebElement RiderAssignment=driver.findElement(By.xpath("//*[@id=\'nosortingtables2\']/tbody/tr[1]/td[11]/div/ul/li[1]/a"));
+		RiderAssignment.click();
+		
+		Thread.sleep(3000);
+		WebElement Clickassign=driver.findElement(By.id("notlob"));
+		Clickassign.click();
+		
+	
+	
+		
+		
+		
+
 		
 		
 		
