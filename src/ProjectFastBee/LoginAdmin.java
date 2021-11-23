@@ -2,9 +2,12 @@ package ProjectFastBee;
 
 import java.io.File;
 
+import javax.swing.Action;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
@@ -19,7 +22,7 @@ public class LoginAdmin {
 		
 		System.setProperty("webdriver.chrome.driver","C:\\Selenium Training\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://admin.fastbeefood.net/admin");
+		driver.navigate().to("https://admin.fastbeefood.net/admin");
 		
 		//Login page
 		WebElement userName =driver.findElement(By.id("login_username"));
@@ -107,7 +110,7 @@ public class LoginAdmin {
 		search1.sendKeys("Goindha");
 		
 		//WebElement downloadInvoice= driver.findElement(By.xpath("/html/body/section/div/section/div/div[1]/div/div/div/div/div[2]/button"));
-		//downloadInvoice.click();*/
+		//downloadInvoice.click();
 			
 	   
 	    
@@ -131,10 +134,10 @@ public class LoginAdmin {
 		Enddate1.clear();
 		Enddate1.sendKeys("18th Nov 2021");
 		
-		/*WebElement Restaurantselection= driver.findElement(By.xpath("//*[@id=\'restaurant_id\']"));
+		WebElement Restaurantselection= driver.findElement(By.xpath("//*[@id=\'restaurant_id\']"));
 		Restaurantselection.click();
 		Select select8=new Select(Restaurantselection);
-		select8.selectByVisibleText("Juicy");*/
+		select8.selectByVisibleText("Juicy");
 		
 		WebElement SalesReport= driver.findElement(By.xpath("//*[@id=\'form_validation\']/div/div[4]/button"));
 		SalesReport.click();
@@ -147,10 +150,10 @@ public class LoginAdmin {
 		WebElement Searchsales=driver.findElement(By.xpath("//*[@id=\'nosortingtables_filter\']/label/input"));
 		Searchsales.sendKeys("FASTBEE060");
 		
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
 		
 		//Order Management Module
-		WebElement Ordermanagement=driver.findElement(By.xpath("//a[normalize-space()='Order Management']"));
+		/*WebElement Ordermanagement=driver.findElement(By.xpath("//a[normalize-space()='Order Management']"));
 		Ordermanagement.click();
 		
 		WebElement Actionstoassign=driver.findElement(By.xpath("//*[@id=\'dropdownMenuButton\']"));
@@ -163,19 +166,212 @@ public class LoginAdmin {
 		WebElement Clickassign=driver.findElement(By.id("notlob"));
 		Clickassign.click();
 		
+		Thread.sleep(3000);
+		WebElement assigntojacktest=driver.findElement(By.xpath("//*[@id=\'riderslist\']/table/tbody/tr[4]/td[6]/button"));
+		assigntojacktest.click();
+		
+				
+		Thread.sleep(3000);
 	
-	
-		
-		
-		
-
-		
+		WebElement closeassign = driver.findElement(By.xpath("//*[@id=\'ourriders\']/div/div/div[3]/button"));
+		closeassign.click();*/
 		
 		
 		
 		
+		/*WebElement Actionstoassign1=driver.findElement(By.xpath("//*[@id=\'dropdownMenuButton\']"));
+		Actionstoassign1.click();
+		
+		WebElement Editdetails=driver.findElement(By.xpath("//*[@id=\'nosortingtables2\']/tbody/tr[1]/td[11]/div/ul/li[2]/a"));
+		Editdetails.click();
+		
+		WebElement Statusoforder=driver.findElement(By.name("request_status"));
+		Statusoforder.click();
+		Select select9=new Select(Statusoforder);
+		select9.selectByVisibleText("Delivered");
+		
+		WebElement Updatebtn1=driver.findElement(By.xpath("/html/body/section/div/section/div/div[3]/div/div/div/section/div/div[1]/div[2]/span/form/button"));
+		Updatebtn1.click();
+		
+		WebElement Paidby=driver.findElement(By.name("request_pay_type"));
+		Paidby.click();
+		Select select10=new Select(Paidby);
+		select10.selectByVisibleText("Debit Card");
+		
+		WebElement Updatebtn2=driver.findElement(By.xpath("/html/body/section/div/section/div/div[3]/div/div/div/section/div/div[1]/div[3]/span/form/button"));
+		Updatebtn2.click();*/
+		
+		
+		//Searchorders		
 		/*WebElement Searchorders=driver.findElement(By.linkText("Search Orders"));
-		Searchorders.click();*/
+		Searchorders.click();
+		Thread.sleep(3000);
+		
+		WebElement Orderid=driver.findElement(By.id("orderid"));
+		Orderid.sendKeys("FASTBEE072");
+		Thread.sleep(3000);
+		WebElement Searchrest=driver.findElement(By.xpath("//*[@id=\'restaurant_id\']"));
+		Searchrest.click();
+		Select select11=new Select(Searchrest);
+		select11.selectByVisibleText("Juicy");
+		Thread.sleep(3000);
+		
+		WebElement startdate=driver.findElement(By.id("datesfrom"));
+		startdate.clear();
+		Thread.sleep(3000);
+		startdate.sendKeys("17th Nov 2021");
+		
+		
+		Thread.sleep(3000);
+		WebElement Enddate=driver.findElement(By.id("datesto"));
+		Enddate.clear();
+		Thread.sleep(3000);
+		Enddate.sendKeys("23rd Nov 2021");
+		
+		WebElement submitbtn=driver.findElement(By.xpath("//*[@id=\'form_validation\']/div/div[7]/button"));
+		submitbtn.click();*/
+		
+		
+		//Registeredusers
+		/*WebElement Registeredusers=driver.findElement(By.xpath("//*[@id=\'leftsidebar\']/div/div/div/div/ul/li[5]/a"));
+		Registeredusers.click();
+		
+		Thread.sleep(3000);
+		WebElement Thisyear=driver.findElement(By.xpath("//a[normalize-space()='This Year']"));
+		Thisyear.click();
+		
+		Thread.sleep(3000);
+		WebElement search01=driver.findElement(By.xpath("//*[@id=\'nosortingtables_filter\']/label/input"));
+		search01.sendKeys("Test");
+		
+		Thread.sleep(3000);
+		WebElement thismonth=driver.findElement(By.xpath("//a[normalize-space()='This Month']"));
+		thismonth.click();
+		
+		//Settings(Restaurant super admin)
+		
+		WebElement Settings=driver.findElement(By.xpath("//a[normalize-space()='Settings']"));
+		Actions actions01 = new Actions(driver);
+		actions01.moveToElement(Settings);
+		Thread.sleep(3000);
+		
+		WebElement restsuperadmin= driver.findElement(By.xpath("//span[normalize-space()='Settings']//following::li[1]"));
+		actions01.moveToElement(restsuperadmin);
+		actions01.click().build().perform();
+		
+		WebElement Addsuperadmin=driver.findElement(By.xpath("/html/body/section/div/section/div/div[2]/div/div/div[1]/h2/strong[2]"));
+		Addsuperadmin.click();
+		
+		WebElement Manageadmin=driver.findElement(By.xpath("/html/body/section/div/section/div/div[2]/div/div/div[1]/h2/strong[2]"));
+		Manageadmin.click();
+		
+		//Settings(Sort Restaurants)
+		
+		Thread.sleep(3000);
+		WebElement Settings01=driver.findElement(By.xpath("//a[normalize-space()='Settings']"));
+		Actions actions02 = new Actions(driver);
+		actions02.moveToElement(Settings01);
+		Thread.sleep(3000);
+		
+		WebElement Sortrest= driver.findElement(By.xpath("//span[normalize-space()='Settings']//following::li[2]"));
+		actions02.moveToElement(Sortrest);
+		actions02.click().build().perform();
+		
+		//Settings(Promocodes)
+		
+		Thread.sleep(3000);
+		WebElement Settings02=driver.findElement(By.xpath("//a[normalize-space()='Settings']"));
+		Actions actions03 = new Actions(driver);
+		actions03.moveToElement(Settings02);
+		Thread.sleep(3000);
+		
+		WebElement Promocodes= driver.findElement(By.xpath("//span[normalize-space()='Settings']//following::li[3]"));
+		actions03.moveToElement(Promocodes);
+		actions03.click().build().perform();
+		
+		WebElement AddPromo=driver.findElement(By.xpath("/html/body/section/div/section/div/div[2]/div/div/div[1]/h2/a"));
+		AddPromo.click();
+		
+		WebElement Titlepromo=driver.findElement(By.name("title"));
+		Titlepromo.sendKeys("StephenTest");
+		Thread.sleep(2000);
+		WebElement Descriptionpromo = driver.findElement(By.xpath("//*[@id=\'add_promocode\']/div[2]/div/span/textarea"));
+		Descriptionpromo.sendKeys("Promocode Testing");
+		Thread.sleep(2000);
+		WebElement Code=driver.findElement(By.name("code"));
+		Code.sendKeys("Stephen Promos");
+		Thread.sleep(2000);
+		WebElement Deliverytype=driver.findElement(By.xpath("//*[@id=\'add_promocode\']/div[4]/div/span/div/div[1]/label"));
+		Deliverytype.click();
+		Thread.sleep(2000);
+		WebElement Coupontype=driver.findElement(By.xpath("//*[@id=\'add_promocode\']/div[5]/div/span/div/div[2]/label"));
+		Coupontype.click();
+		
+		WebElement Offertype=driver.findElement(By.xpath("//*[@id=\'add_promocode\']/div[6]/div/span/select"));
+	    Select select14= new Select(Offertype);
+	    select14.selectByVisibleText("Percent");
+	    
+	    WebElement Maxamount=driver.findElement(By.name("max_amount"));
+	    Maxamount.sendKeys("3000");
+	    
+	    WebElement Discount=driver.findElement(By.name("value"));
+	    Discount.sendKeys("10");
+	    
+	    WebElement LimitCoupon= driver.findElement(By.name("total_use"));
+	    LimitCoupon.sendKeys("2");
+	    
+	    WebElement Limituser=driver.findElement(By.name("use_per_customer"));
+	    Limituser.sendKeys("3");
+	    
+	    WebElement Submitpromo=driver.findElement(By.xpath("//*[@id=\'add_promocode\']/div[14]/div/button"));
+	    Submitpromo.click();
+	    
+	    Thread.sleep(3000);
+		
+		WebElement Actionpromo=driver.findElement(By.xpath("//*[@id=\'dropdownMenuButton\']"));
+		Actionpromo.click();
+		Thread.sleep(2000);
+		WebElement Deletepromo= driver.findElement(By.xpath("//*[@id=\'nosortingtables\']/tbody/tr[1]/td[11]/div/ul/li[2]/a"));
+		Deletepromo.click();*/
+		
+		//Settings(Hotdeals)
+		
+		WebElement Settings03=driver.findElement(By.xpath("//a[normalize-space()='Settings']"));
+		Actions hotdeals = new Actions(driver);
+		hotdeals.moveToElement(Settings03);
+		Thread.sleep(3000);
+		
+		WebElement HotDeals= driver.findElement(By.xpath("//span[normalize-space()='Settings']//following::li[4]"));
+		hotdeals.moveToElement(HotDeals);
+		hotdeals.click().build().perform();
+		
+		
+		
+		
+		
+		
+		
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    		
+	    
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
