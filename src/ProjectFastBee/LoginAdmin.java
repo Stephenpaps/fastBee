@@ -433,7 +433,7 @@ public class LoginAdmin {
 		SendNoti.click();		
 		
 		Alert confirm=driver.switchTo().alert();
-		confirm.accept();*/
+		confirm.accept();
 		
 		//Settings(Manage Restaurants)
 		WebElement Settings08=driver.findElement(By.xpath("//a[normalize-space()='Settings']"));
@@ -491,7 +491,7 @@ public class LoginAdmin {
 		homedeliv.click();
 		
 		WebElement pickup=driver.findElement(By.id("pickup"));
-		pickup.click();*/
+		pickup.click();
 		
 		//Settings(Restaurant Chat)
 		WebElement Settings09=driver.findElement(By.xpath("//a[normalize-space()='Settings']"));
@@ -514,6 +514,75 @@ public class LoginAdmin {
 		
 		WebElement sendmesg=driver.findElement(By.id("send"));
 		sendmesg.click();
+		
+		
+		//Settings(Rider's Report)
+		WebElement Settings10=driver.findElement(By.xpath("//a[normalize-space()='Settings']"));
+		Actions Reportrider = new Actions(driver);
+		Reportrider.moveToElement(Settings10);
+		Thread.sleep(3000);
+		
+		WebElement Riderreport= driver.findElement(By.xpath("//span[normalize-space()='Settings']//following::li[12]"));
+		Reportrider.moveToElement(Riderreport);
+		Reportrider.click().build().perform();
+		
+		Thread.sleep(3000);
+		WebElement Selectrider=driver.findElement(By.id("rider_id"));
+		Select selectrider = new Select(Selectrider);
+		selectrider.selectByVisibleText("Kombalanz");
+		
+		WebElement riderdatesfrom=driver.findElement(By.id("datesfrom"));
+		riderdatesfrom.clear();
+		riderdatesfrom.sendKeys("1st Nov 2021");
+		
+		WebElement riderdatesto=driver.findElement(By.id("datesto"));
+		riderdatesto.clear();
+		riderdatesto.sendKeys("25th Nov 2021");
+		
+		WebElement riderreportsearch=driver.findElement(By.xpath("//*[@id=\'form_validation\']/div/div[5]/button"));
+		riderreportsearch.click();
+		
+		//Settings (Refunds report)
+		
+		WebElement Settings11=driver.findElement(By.xpath("//a[normalize-space()='Settings']"));
+		Actions Refundsreport = new Actions(driver);
+		Refundsreport.moveToElement(Settings11);
+		Thread.sleep(3000);
+		
+		WebElement refunds= driver.findElement(By.xpath("//span[normalize-space()='Settings']//following::li[13]"));
+		Refundsreport.moveToElement(refunds);
+		Refundsreport.click().build().perform();
+		
+		WebElement Dec20=driver.findElement(By.xpath("/html/body/section/div/section/div/div[2]/div/div/div/a[12]"));
+		Dec20.click();
+		
+		WebElement DetailsDec20=driver.findElement(By.xpath("/html/body/section/div/section/div/div[1]/div/div/div/div/div[2]/a[2]"));
+		DetailsDec20.click();
+		Thread.sleep(3000);
+		WebElement Goback=driver.findElement(By.xpath("//a[normalize-space()='GO BACK']"));
+		Goback.click();
+		
+		
+		//Settings(Manage Driver)
+		WebElement Settings12=driver.findElement(By.xpath("//a[normalize-space()='Settings']"));
+		Actions Managedriver = new Actions(driver);
+		Managedriver.moveToElement(Settings12);
+		Thread.sleep(3000);
+		
+		WebElement managedriver= driver.findElement(By.xpath("//span[normalize-space()='Settings']//following::li[14]"));
+		Managedriver.moveToElement(managedriver);
+		Managedriver.click().build().perform();
+		
+		WebElement adddriverbtnmd=driver.findElement(By.xpath("/html/body/section/div/section/div/div[2]/div/div/div[1]/h2/a"));
+		adddriverbtnmd.click();*/
+		
+		//Riders on Map
+		WebElement Ridersonmap=driver.findElement(By.xpath("//a[normalize-space()='Riders on Map']"));
+		Ridersonmap.click();
+		
+		
+		
+		
 		
 		
 
