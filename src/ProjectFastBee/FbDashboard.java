@@ -15,7 +15,7 @@ public class FbDashboard {
 		WebDriver driver = new ChromeDriver();
 		driver.navigate().to("https://admin.fastbeefood.net/admin/dashboard");
 		
-		//Today dashboard graph
+		        //Today dashboard graph
 				WebElement GCWgraphtoday = driver.findElement(By.xpath("//*[@id=\'growthcanvas\']/select[1]"));
 				GCWgraphtoday.click();
 				Select select3=new Select(GCWgraphtoday);
@@ -40,21 +40,18 @@ public class FbDashboard {
 				
 				WebElement GCdropdown = driver.findElement(By.name("charttype"));
 				GCdropdown.click();
-				
-				
 				Select select = new Select(GCdropdown);
 				select.selectByVisibleText("Daily");
 				
 				
 				WebElement Restdropdown = driver.findElement(By.name("restaurant_id"));
 				Restdropdown.click();
-				
 				Select select1 =new Select(Restdropdown);
 				select1.selectByVisibleText("Juicy");
 				
+				
 				WebElement Entriesperpage= driver.findElement(By.name("nosortingtables_length"));
 				Entriesperpage.click();
-				
 				Select select2 = new Select(Entriesperpage);
 				select2.selectByVisibleText("25");
 				

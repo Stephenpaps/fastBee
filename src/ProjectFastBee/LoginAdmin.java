@@ -26,8 +26,10 @@ public class LoginAdmin {
 		WebElement submit = driver.findElement(By.xpath("//*[@id=\'form_admin_sign_in\']/div[3]/button"));
 		submit.click();
 		
-		FbDashboard dashboard = new FbDashboard();
+		
+		FbDashboard dashboard= new FbDashboard();
 		dashboard.Dashboard();
+	
 	}
 }		
 		
